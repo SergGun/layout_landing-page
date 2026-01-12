@@ -1,0 +1,32 @@
+.recommended {
+  opacity: 0;
+  transition: 1s, ease-out;
+
+  &__products {
+    @include page-grid;
+
+    row-gap: 40px;
+  }
+
+  &__product {
+    grid-column: 1 / -1;
+    transition: $animation-duration;
+
+    @include on-tablet {
+      grid-column: 1 / -1;
+    }
+
+    @include on-desktop {
+      grid-column: span 4;
+    }
+
+    &:hover {
+      z-index: 2;
+      transform: scale(1.05);
+    }
+  }
+}
+
+.recommended.show {
+  opacity: 1;
+}
