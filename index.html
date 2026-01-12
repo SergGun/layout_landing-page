@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./src/styles/main.scss" />
     <link rel="icon" type="image/png"
      href="./src/images/favicon/favicon.png" />
-    <script src="./main.js" defer></script>
   </head>
   <body class="page__body">
     <header class="header">
@@ -18,8 +17,8 @@
         <div class="header__content">
           <div class="top-bar">ек
             <a href="#" class="top-bar__logo-link">
-              <img src="/src/images/page/logo.png" alt="Nothing Logo" 
-              class="top-bar__logo" />
+              <img src="/src/images/page/logo.png" alt="Nothing Logo"
+               class="top-bar__logo" />
             </a>
             <div class="top-bar__icons">
               <div class="top-bar__phone">
@@ -322,7 +321,22 @@
         </div>
       </div>
     </main>
-
     <footer class="footer"></footer>
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(({ isIntersecting, target }) => {
+            target.classList.toggle('show', isIntersecting);
+          });
+        },
+        {
+          threshold: 0.2,
+        }
+      );
+
+      document
+        .querySelectorAll('.categories, .recommended')
+        .forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
