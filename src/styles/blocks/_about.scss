@@ -1,8 +1,11 @@
-.about {
-  @include page-grid;
+@use '..//utils/variables' as *;
+@use '..//utils/mixins' as *;
 
+.about {
   margin: 0;
   margin-bottom: 24px;
+
+  @include page-grid;
 
   &__title {
     grid-column: 1 / -1;

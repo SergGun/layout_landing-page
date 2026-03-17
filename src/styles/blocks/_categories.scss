@@ -1,6 +1,12 @@
+@use '..//utils/variables' as *;
+@use '..//utils/mixins' as *;
+
 .categories {
   opacity: 0;
-  transition: opacity $animation-duration ease-out;
+  transform: translateY(180px);
+  transition:
+    opacity $animation-duration ease-out,
+    transform $animation-duration ease-out;
 
   &__wrapper {
     display: grid;
@@ -14,9 +20,9 @@
 
 .category {
   &__photos {
-    @include page-grid;
-
     margin-bottom: 16px;
+
+    @include page-grid;
   }
 
   &__link {
@@ -78,4 +84,5 @@
 
 .categories.show {
   opacity: 1;
+  transform: translateY(0);
 }

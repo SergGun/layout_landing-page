@@ -1,11 +1,18 @@
+@use '..//utils/variables' as *;
+@use '..//utils/mixins' as *;
+
 .recommended {
   opacity: 0;
-  transition: 1s, ease-out;
+
+  transform: translateY(180px);
+  transition:
+    opacity $animation-duration ease-out,
+    transform $animation-duration ease-out;
 
   &__products {
-    @include page-grid;
-
     row-gap: 40px;
+
+    @include page-grid;
   }
 
   &__product {
@@ -29,4 +36,5 @@
 
 .recommended.show {
   opacity: 1;
+  transform: translateY(0);
 }

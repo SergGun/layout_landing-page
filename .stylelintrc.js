@@ -3,5 +3,10 @@ module.exports = {
   plugins: [
     "stylelint-scss"
   ],
-  rules: {}
+  rules: {},
+  ignoreFiles: [
+    "src/styles/main.css",        // исключаем скомпилированный CSS
+    "src/styles/main.css.map"     // если есть source map
+  ]
 };
+

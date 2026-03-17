@@ -1,3 +1,6 @@
+@use '..//utils/variables' as *;
+@use '..//utils/mixins' as *;
+
 .contacts {
   &__link {
     color: inherit;
@@ -5,10 +8,10 @@
   }
 
   &__wrapper {
-    @include page-grid;
-
     grid-auto-flow: dense;
     row-gap: 16px;
+
+    @include page-grid;
   }
 
   &__field {

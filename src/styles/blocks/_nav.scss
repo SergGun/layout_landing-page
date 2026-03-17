@@ -1,3 +1,5 @@
+@use '..//utils/variables' as *;
+
 .nav {
   &__item {
     opacity: 0;

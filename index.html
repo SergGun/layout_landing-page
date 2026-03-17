@@ -7,9 +7,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet" />
-    <link rel="stylesheet" href="./src/styles/main.scss" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
     <link rel="icon" type="image/png"
      href="./src/images/favicon/favicon.png" />
+    <script defer src="./src/scripts/main.js"></script>
   </head>
   <body class="page__body">
     <header class="header">
@@ -105,7 +106,7 @@
               </article>
               <article class="product recommended__product">
                 <a href="#">
-                  <img src="/src/images/products/ear.png" alt="Nothing Phone" 
+                  <img src="/src/images/products/ear.png" alt="Nothing Phone"
                   class="product_photo" />
                 </a>
                 <h3 class="product_title">Ear (2)</h3>
@@ -117,7 +118,7 @@
               </article>
               <article class="product recommended__product">
                 <a href="#">
-                  <img src="/src/images/products/ear-stick.png" alt="Nothing Phone" 
+                  <img src="/src/images/products/ear-stick.png" alt="Nothing Phone"
                   class="product_photo" />
                 </a>
                 <h3 class="product_title">Ear (stick)</h3>
@@ -258,27 +259,27 @@
           <section class="contacts" id="contact">
             <h2 class="section-title">Contact us</h2>
 
-            <form class="contacts__wrapper" action="#" 
+            <form class="contacts__wrapper" action="#"
             onsubmit="this.reset(); return false;">
               <div class="contacts__field">
-                <input id="name" name="name" 
+                <input id="name" name="name"
                 class="contacts__input contacts__input--name" type="text"
-                  placeholder="Name" autocomplete="name" 
-                  required autocapitalize="words" 
+                  placeholder="Name" autocomplete="name"
+                  required autocapitalize="words"
                   spellcheck="false" />
               </div>
 
               <div class="contacts__field">
-                <input id="email" name="email" 
+                <input id="email" name="email"
                 class="contacts__input contacts__input--email" type="email"
-                  placeholder="Email" autocomplete="email" 
+                  placeholder="Email" autocomplete="email"
                   required inputmode="email" />
               </div>
 
               <div class="contacts__field">
-                <textarea id="message" name="message" 
+                <textarea id="message" name="message"
                 class="contacts__input contacts__input--textarea"
-                  placeholder="Message" rows="5" 
+                  placeholder="Message" rows="5"
                   required></textarea>
               </div>
 
@@ -322,21 +323,5 @@
       </div>
     </main>
     <footer class="footer"></footer>
-    <script>
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(({ isIntersecting, target }) => {
-            target.classList.toggle('show', isIntersecting);
-          });
-        },
-        {
-          threshold: 0.2,
-        }
-      );
-
-      document
-        .querySelectorAll('.categories, .recommended')
-        .forEach((el) => observer.observe(el));
-    </script>
   </body>
 </html>
