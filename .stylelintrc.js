@@ -5,8 +5,8 @@ module.exports = {
   ],
   rules: {},
   ignoreFiles: [
-    "src/styles/main.css",        // исключаем скомпилированный CSS
-    "src/styles/main.css.map"     // если есть source map
+    "src/styles/main.css",
+    "src/styles/main.css.map"
   ]
 };
 
